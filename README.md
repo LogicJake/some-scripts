@@ -1,4 +1,4 @@
-# tools
+# some-scripts
 some useful scripts
 ## bing-wallpaper
 A python script which can download bing's beautiful wallpaper and set the picture to your computer wallpaper. It is tested and works well on ubuntu.   
