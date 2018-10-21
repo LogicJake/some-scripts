@@ -9,4 +9,4 @@ you have two choices to use it:
 ``` sh
 $ python3 bing-wallpaper/wallpaper.py
 ``` 
-* or just double click bing-wallpaper/wallpaper
+* or just double click bing-wallpaper/wallpaper without installing python3.
