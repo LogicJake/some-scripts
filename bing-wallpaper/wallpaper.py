@@ -39,7 +39,7 @@ def download(num_saved, wallpaper_path):
 
     if not os.path.exists(wallpaper_path):
         os.mkdir(wallpaper_path)
-    print("wallpapers are saved in :" + wallpaper_path)
+    print("wallpapers are saved in " + wallpaper_path)
 
     try:
         for date, url in wallpapers.items():
@@ -78,9 +78,15 @@ def check_saved_wallpaper(num_saved, wallpaper_path):
 
 
 def main(args):
-    download(args.num, args.path)
-    check_saved_wallpaper(args.num, args.path)
-    set_wallpaper(args.path)
+    wallpaper_num = args.num
+    wallpaper_path = args.path
+
+    if not wallpaper_path.endswith('/'):
+        wallpaper_path += '/'
+
+    download(wallpaper_num, wallpaper_path)
+    check_saved_wallpaper(wallpaper_num, wallpaper_path)
+    set_wallpaper(wallpaper_path)
 
 
 if __name__ == '__main__':

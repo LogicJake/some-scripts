@@ -1,2 +1,4 @@
 .idea/
 bing-wallpaper/__pycache__/
+
+*.pyc
