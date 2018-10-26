@@ -15,17 +15,17 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description="timely replacement wallpaper from bing.")
 
-    parser.add_argument('--interval', nargs='?', default=1, type=int,
-                        help='the interval between wallpaper replacement. By hours')
+    parser.add_argument('--interval', nargs='?', default=1, type=float,
+                        help='time interval for scripts to change wallpapers. By hours.')
 
     parser.add_argument('--num', nargs='?', default=7, type=int,
-                        help='the maximum value of saved wallpaper')
+                        help='number of images saved in local folder at most')
 
     user_name = getpass.getuser()
     wallpaper_path = '/home/' + user_name + '/wallpapers/'
 
     parser.add_argument('--path', nargs='?', default=wallpaper_path, type=str,
-                        help='the path to save wallpaper')
+                        help='path to save images')
 
     return parser.parse_args()
 
