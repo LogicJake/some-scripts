@@ -1,15 +1,4 @@
 ## bing-wallpaper
-```
-  _     _                             _ _                             
- | |   (_)                           | | |                            
- | |__  _ _ __   __ _  __      ____ _| | |_ __   __ _ _ __   ___ _ __ 
- | '_ \| | '_ \ / _` | \ \ /\ / / _` | | | '_ \ / _` | '_ \ / _ \ '__|
- | |_) | | | | | (_| |  \ V  V / (_| | | | |_) | (_| | |_) |  __/ |   
- |_.__/|_|_| |_|\__, |   \_/\_/ \__,_|_|_| .__/ \__,_| .__/ \___|_|   
-                 __/ |                   | |         | |              
-                |___/                    |_|         |_|
-              
-```
 A python script which can download bing's beautiful images and set the image to your computer wallpaper. This script can also change wallpaper every once in a while. It is tested and works well on ubuntu.   
 ### HOW TO USE
 #### arguments
