@@ -6,7 +6,6 @@ import argparse
 import getpass
 
 import wallpaper
-import threading as thd
 import time
 
 
@@ -15,8 +14,8 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description="timely replacement wallpaper from bing.")
 
-    parser.add_argument('--interval', nargs='?', default=1, type=float,
-                        help='time interval for scripts to change wallpapers. By hours.')
+    parser.add_argument('--interval', nargs='?', default=60, type=float,
+                        help='time interval for scripts to change wallpapers. By minutes.')
 
     parser.add_argument('--num', nargs='?', default=7, type=int,
                         help='number of images saved in local folder at most')
@@ -33,7 +32,7 @@ def parse_args():
 def main(args):
     while True:
         wallpaper.main(args)
-        time.sleep(args.interval * 60 * 60)
+        time.sleep(args.interval * 60)
 
 
 if __name__ == "__main__":

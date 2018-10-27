@@ -12,13 +12,13 @@ optional arguments:
   -h, --help            show this help message and exit
   --interval [INTERVAL]
                         time interval for scripts to change wallpapers. By
-                        hours.
+                        minutes.
   --num [NUM]           number of images saved in local folder at most
   --path [PATH]         path to save images
 ```
 * interval  
-Time interval for scripts to change wallpapers. The unit of this argument is hourly and default value is **1 hour**. 
-* num
+Time interval for scripts to change wallpapers. The unit of this argument is minute and default value is **60 minutes**. 
+* num  
 Number of images saved in local folder at most. Script will only keep **num** latest bing's images, and the expired will be deleted. Script will choose one image as wallpaper randomly. Default value is **7**.
 * path  
 Path to save wallpaper. If the current user does not have permission to write to or create the path, you may need administrator privileges. Default value is **'/home/user/wallpapers'**.
