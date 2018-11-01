@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author: LogicJake
 # @Date:   2018-11-01 20:01:54
-# @Last Modified time: 2018-11-01 21:08:16
+# @Last Modified time: 2018-11-01 21:16:25
 import argparse
 import datetime
 import time
@@ -21,7 +21,7 @@ def parse_args():
     parser.add_argument('--test', nargs='?', default=False, type=bool,
                         help='whether to send an email immediately to test if the system works well')
 
-    parser.add_argument('--hour', nargs='?', default=9, type=int,
+    parser.add_argument('--hour', nargs='?', default=9, type=int, required=True,
                         help='the time(hour between 0 and 23) the system sent the report')
 
     return parser.parse_args()
