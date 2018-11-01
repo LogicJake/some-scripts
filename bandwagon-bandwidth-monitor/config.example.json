@@ -1,0 +1,10 @@
+{
+	"login":{
+		"ip":"192.1681.1.1",
+		"password":"password"
+	},
+	"mail":{
+		"address":"monitor@qq.com",
+		"password":"monitor"
+	}
+}
