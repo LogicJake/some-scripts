@@ -1,7 +1,7 @@
 ## ssh-for-lab  
 A script which can directly login the lab's server without knowing the IP.  
 
-The script works very simply. Check if hostname is 'lab', if so, find the newest IP address from the website, replace hostname with IP address, and then give the transformated command to 'os system'.    
+The script works very simply. Check if the hostname is 'lab'. if so, find the newest IP address from the website, replace hostname with IP address, and then give the transformed command to 'os system'.    
 
 [![gif with examples][examples-link]][examples-link]
 
