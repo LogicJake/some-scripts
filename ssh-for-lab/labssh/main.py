@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 # @Author: LogicJake
 # @Date:   2018-12-30 14:18:53
-# @Last Modified time: 2018-12-30 15:20:30
+# @Last Modified time: 2018-12-30 18:28:44
 import sys
-import myssh
+from .myssh import ssh
 
 
 def main():
     ssh_command = sys.argv[1:]
-    myssh.ssh(ssh_command)
+    ssh(ssh_command)
 
 
 if __name__ == "__main__":
