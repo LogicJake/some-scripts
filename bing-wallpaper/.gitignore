@@ -1,2 +1,5 @@
+build/
 
-wallpapers/
+dist/
+
+BingWallpaper\.egg-info
