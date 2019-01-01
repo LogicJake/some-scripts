@@ -5,7 +5,6 @@
 import getpass
 import datetime
 import os
-from json import JSONDecodeError
 from random import choice
 import requests
 import json
@@ -44,8 +43,8 @@ def download(num_saved, wallpaper_path):
 
     except RequestException:
         logging.error('request api fail')
-    except JSONDecodeError:
-        logging.error('api content error')
+    except Exception as e:
+        logging.error(repr(e))
 
     if not os.path.exists(wallpaper_path):
         os.mkdir(wallpaper_path)

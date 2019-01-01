@@ -30,7 +30,7 @@ elif (3, 0) < version < (3, 4):
     sys.exit(-1)
 
 install_requires = ['requests']
-VERSION = '1.0.0'
+VERSION = '1.2.0'
 
 
 setuptools.setup(

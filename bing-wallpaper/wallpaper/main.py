@@ -81,7 +81,7 @@ def stopDeamon():
             except ProcessLookupError:
                 pass
         os.remove(pid_path)
-    except FileNotFoundError:
+    except IOError:
         pass
 
 
