@@ -9,8 +9,12 @@ pip3 install BingWallpaper
 There are three arguments you can set:
 ```
 usage: wallpaper [-h] [--interval [INTERVAL]] [--num [NUM]] [--path [PATH]]
+                 [stop]
 
 timely replacement wallpaper from bing.
+
+positional arguments:
+  stop                  stop wallpaper
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -20,6 +24,8 @@ optional arguments:
   --num [NUM]           number of images saved in local folder at most
   --path [PATH]         path to save images
 ```
+* stop
+stop wallpaper
 * interval  
 Time interval for scripts to change wallpapers. The unit of this argument is second and default value is **3 seconds**. 
 * num  
@@ -34,4 +40,8 @@ wallpaper
 This is the simplest command and three arguments are set to the default value. You can customize your commands like this:
 ```bash
 wallpaper --interval 4 --num 5 --path /home/bing/test/
+```
+If you want to stop the script, you can run the following code.
+```bash
+wallpaper stop
 ```
