@@ -2,17 +2,23 @@
 # @Time    : 18-10-20 下午8:42
 # @Author  : LogicJake
 # @File    : wallpaper.py
-from __future__ import print_function
-
+import getpass
 import datetime
 import os
 from json import JSONDecodeError
 from random import choice
-
 import requests
 import json
-
 from requests import RequestException
+import logging
+
+log_file = '.wallpaper_log'
+user_name = getpass.getuser()
+user_path = '/home/' + user_name
+log_path = os.path.join(user_path, log_file)
+
+logging.basicConfig(filename=log_path, level=logging.INFO)
+
 
 bing_wallpaper = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n={}&mkt=zh-CN'
 bing_prefix = 'https://cn.bing.com'
@@ -37,9 +43,9 @@ def download(num_saved, wallpaper_path):
                                      'startdate'], 1)] = bing_prefix + content['images'][i]['url']
 
     except RequestException:
-        print('ERROR: request api fail')
+        logging.error('request api fail')
     except JSONDecodeError:
-        print('ERROR: api content error')
+        logging.error('api content error')
 
     if not os.path.exists(wallpaper_path):
         os.mkdir(wallpaper_path)
@@ -51,7 +57,7 @@ def download(num_saved, wallpaper_path):
                 with open(save_path, 'wb') as f:
                     f.write(requests.get(url).content)
     except RequestException:
-        print('ERROR: downloading wallpaper fail')
+        logging.error('downloading wallpaper fail')
 
 
 def set_wallpaper(wallpaper_path):
@@ -64,7 +70,7 @@ def set_wallpaper(wallpaper_path):
         os.system(
             'gsettings set org.gnome.desktop.background picture-uri "file:{}"'.format(wallpaper))
     except Exception:
-        print('ERROR: setting wallpaper fail')
+        logging.error('setting wallpaper fail')
 
 
 def check_saved_wallpaper(num_saved, wallpaper_path):
@@ -92,7 +98,3 @@ def start(args):
     download(wallpaper_num, wallpaper_path)
     check_saved_wallpaper(wallpaper_num, wallpaper_path)
     set_wallpaper(wallpaper_path)
-
-
-if __name__ == '__main__':
-    start(10)
