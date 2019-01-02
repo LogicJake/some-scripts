@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author: LogicJake
 # @Date:   2018-12-30 15:22:17
-# @Last Modified time: 2018-12-30 20:13:40
+# @Last Modified time: 2019-01-02 13:13:02
 import setuptools
 import pkg_resources
 import sys
@@ -30,7 +30,7 @@ elif (3, 0) < version < (3, 4):
     sys.exit(-1)
 
 install_requires = ['requests']
-VERSION = '1.2.0'
+VERSION = '1.2.1'
 
 
 setuptools.setup(

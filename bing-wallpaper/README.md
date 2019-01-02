@@ -24,7 +24,7 @@ optional arguments:
   --num [NUM]           number of images saved in local folder at most
   --path [PATH]         path to save images
 ```
-* stop
+* stop  
 stop wallpaper
 * interval  
 Time interval for scripts to change wallpapers. The unit of this argument is second and default value is **3 seconds**. 
