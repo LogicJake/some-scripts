@@ -67,7 +67,7 @@ def set_wallpaper(wallpaper_path):
 
     try:
         os.system(
-            'gsettings set org.gnome.desktop.background picture-uri "file:{}"'.format(wallpaper))
+            '/usr/bin/gsettings set org.gnome.desktop.background picture-uri "file:{}"'.format(wallpaper))
     except Exception:
         logging.error('setting wallpaper fail')
 
