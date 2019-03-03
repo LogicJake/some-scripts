@@ -1,3 +1,4 @@
+[![pip](https://img.shields.io/pypi/dm/labssh.svg)](https://pypi.org/project/labssh/)
 ## ssh-for-lab  
 A script which can directly login the lab's server without knowing the IP.  
 
